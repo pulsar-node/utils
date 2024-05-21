@@ -35,7 +35,7 @@ for (( ; ; )); do
     #blue=$(tput setaf 4)
     #normal=$(tput sgr0)
     printf "Current block height: 👉 %s\r" "${CYAN} $height ${NC}"
-    echo -e "Current block height: ${CYAN}$height${NC} \r"
+    # echo -e "Current block height: ${CYAN}$height${NC} \r"
   fi
   sleep 5
 done
