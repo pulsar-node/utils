@@ -32,9 +32,9 @@ for (( ; ; )); do
     $BINARY version --long | head
     break
   else
-    blue=$(tput setaf 4)
+    yellow=$(tput setaf 3)
     normal=$(tput sgr0)
-    printf "Current block height: %s\r" "${blue} $height ${normal}"
+    printf "Current block height: %s\r" "${yellow} $height ${normal}"
   fi
   sleep 5
 done
