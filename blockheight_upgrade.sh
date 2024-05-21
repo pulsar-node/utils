@@ -32,7 +32,7 @@ for (( ; ; )); do
     $BINARY version --long | head
     break
   else
-    echo -e "Current block height: ${CYAN}$height${NC}"
+    echo -e "Current block height: ${CYAN}$height${NC} \r"
   fi
   sleep 5
 done
