@@ -38,6 +38,7 @@ for (( ; ; )); do
 done
 
 printLine
+echo -e ""
 echo -e "Check logs:            ${CYAN}sudo journalctl -u $BINARY_NAME -f --no-hostname -o cat ${NC}"
 echo -e "Check synchronization: ${CYAN}$BINARY_NAME status 2>&1 | jq -r '.SyncInfo.latest_block_height // .sync_info.latest_block_height'${NC}"
 echo -e "More commands:         ${CYAN}$CHEAT_SHEET${NC}"
