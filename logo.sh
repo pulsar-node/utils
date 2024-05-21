@@ -1,5 +1,2 @@
 #!/bin/bash
-echo "🅿🆄🅻🆂🅰🆁      🅿🆄🅻🆂🅰🆁        🅿🆄🅻🆂🅰🆁"
-echo "      🅿🆄🅻🆂🅰🆁            🅿🆄🅻🆂🅰🆁"
-echo "          🅿🆄🅻🆂🅰🆁 🅿🆄🅻🆂🅰🆁"
-echo "               🅿🆄🅻🆂🅰🆁"
+echo "PULSAR PULSAR  PULSAR  PULSAR "
