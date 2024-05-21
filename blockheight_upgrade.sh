@@ -34,7 +34,7 @@ for (( ; ; )); do
   else
     blue=$(tput setaf 4)
     normal=$(tput sgr0)
-    printf "Current block height: 👉 %s\r" "${blue} $height ${normal}"
+    printf "Current block height: %s\r" "${blue} $height ${normal}"
   fi
   sleep 5
 done
