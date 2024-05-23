@@ -2,6 +2,7 @@
 
 # List of URLs to check
 urls=(
+    "https://files.node4all.nl/$PROJECT/snap_$PROJECT.tar.lz4"
     "https://files.andromedanode.co/$PROJECT/snap_$PROJECT.tar.lz4"
     "https://$NETWORK-files.itrocket.net/$PROJECT/snap_$PROJECT.tar.lz4"
     "https://snapshots-$NETWORK.nodejumper.io/$PROJECT-$NETWORK/$PROJECT-$PROJECT_latest.tar.lz4"
