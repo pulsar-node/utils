@@ -10,5 +10,5 @@ git clone https://github.com/oraichain/orai
 cd orai/orai 
 git checkout $VERSION
 # make install
-echo $VERSION "<--"
+echo $1 "<--" $VERSION "<--"
 sudo systemctl start oraid
