@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "PULSAR PULSAR  PULSAR  PULSAR "
+echo "PULSAR PULSAR PULSAR PULSAR "
