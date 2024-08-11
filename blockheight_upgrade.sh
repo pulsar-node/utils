@@ -27,7 +27,7 @@ for (( ; ; )); do
   fi
   if ((height >= TARGET_BLOCK)); then
     bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade/$CHAIN_NAME_upgrade.sh) $VERSION
-    printCyan "Your node was successfully upgraded to version: $VERSION" && sleep 1
+    printCyan "Your node was successfully upgraded to version: $VERSION" && sleep 2
     $BINARY version --long | head
     break
   else
