@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # colorpath.sh
-NC="\e[0m"           # no color
-CYAN="\e[1m\e[1;96m" # cyan color
-RED="\e[1m\e[1;91m" # red color
+NC=$(tput sgr0)			  # no color
+RED=$(tput setaf 1)		# red color
+CYAN=$(tput setaf 6)	# cyan color
+YELLOW=$(tput setaf 3)
 
 function printLogo {
   bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/logo.sh)
