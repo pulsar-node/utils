@@ -17,8 +17,8 @@ done
 
 printLogo
 
-yellow=$(tput setaf 3)
-normal=$(tput sgr0)
+YELLOW=$(tput setaf 3)
+NORMAL=$(tput sgr0)
 
 echo -e "Your ${CYAN}$CHAIN_NAME${NC} node will be upgraded to version ${CYAN}$VERSION${NC} on block height ${CYAN}$TARGET_BLOCK${NC}" && sleep 1
 echo ""
@@ -30,12 +30,12 @@ for (( ; ; )); do
     height=$($BINARY status --node="tcp://127.0.0.1:$PORT_RPC" 2>&1 | jq -r '.SyncInfo.latest_block_height // .sync_info.latest_block_height')
   fi
   if ((height >= TARGET_BLOCK)); then
-    bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade/oraichain_upgrade.sh) $VERSION
+    bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade/$CHAIN_NAME_upgrade.sh) $VERSION
     printCyan "Your node was successfully upgraded to version: $VERSION" && sleep 1
     $BINARY version --long | head
     break
   else
-    printf "Current block height: %s\r" "${yellow} $height ${normal}"
+    printf "Current block height: %s\r" "${YELLOW} $height ${NORMAL}"
   fi
   sleep 5
 done
