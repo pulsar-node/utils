@@ -32,7 +32,7 @@ for (( ; ; )); do
     $BINARY version --long | head
     break
   else
-    printf "Current block height: %s%s      \r" "${YELLOW}${height}${NC} - " $(expr $TARGET_BLOCK - $height)
+    printf "Current block height: %s%s  \r" "${YELLOW}${height}${NC} - " $(expr $TARGET_BLOCK - $height)
   fi
   sleep 5
 done
