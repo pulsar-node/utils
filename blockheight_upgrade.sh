@@ -17,11 +17,7 @@ done
 
 printLogo
 
-YELLOW=$(tput setaf 3)
-NORMAL=$(tput sgr0)
-
-echo -e "Your ${CYAN}$CHAIN_NAME${NC} node will be upgraded to version ${CYAN}$VERSION${NC} on block height ${CYAN}$TARGET_BLOCK${NC}" && sleep 1
-echo ""
+echo -e "Your ${CYAN}$CHAIN_NAME${NC} node will be upgraded to version ${CYAN}$VERSION${NC} on block height ${CYAN}$TARGET_BLOCK${NC}"
 
 for (( ; ; )); do
   if [ -z "$PORT_RPC" ]; then
@@ -35,7 +31,7 @@ for (( ; ; )); do
     $BINARY version --long | head
     break
   else
-    printf "Current block height: %s\r" "${YELLOW} $height ${NORMAL}"
+    printf "Current block height: %s\r" "${YELLOW} $height ${NC}"
   fi
   sleep 5
 done
