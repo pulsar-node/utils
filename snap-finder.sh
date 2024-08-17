@@ -5,8 +5,8 @@
 
 # List of URLs to check 
 urls=(
+    "https://snapshots.polkachu.com/snapshots/orai/orai_30369412.tar.lz4"
     "https://files.andromedanode.co/$PROJECT/snap_$PROJECT.tar.lz4"
-    "https://snapshots.polkachu.com/snapshots/orai/orai_29408148.tar.lz4"
     "https://chains.oldcat.io/mainnets/orai/orai_29985734.tar.lz4"
     "https://snapshots.nysa.network/Oraichain/Oraichain_29940329.tar.lz4"
     "https://files.node4all.nl/$PROJECT/snap_$PROJECT.tar.lz4"
