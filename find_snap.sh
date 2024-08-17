@@ -3,7 +3,7 @@
 # SNAP_NAME=$(curl -s https://ss.pryzm.nodestake.org/ | egrep -o ">20.*\.tar.lz4" | tr -d ">")
 # curl -o - -L https://ss.pryzm.nodestake.org/${SNAP_NAME}  | lz4 -c -d - | tar -x -C $HOME/.pryzm
 
-# List of URLs to check
+# List of URLs to check 
 urls=(
     "https://files.andromedanode.co/$PROJECT/snap_$PROJECT.tar.lz4"
     "https://snapshots.polkachu.com/snapshots/orai/orai_29408148.tar.lz4"
