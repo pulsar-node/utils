@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # update and init app
 export VERSION=2.4
