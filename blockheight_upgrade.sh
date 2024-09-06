@@ -38,6 +38,6 @@ for (( ; ; )); do
 done
 
 printLine
-echo -e "Check logs:            $(printCyan "sudo journalctl -u ${BINARY} -f --no-hostname -o cat")"
-echo -e "Check synchronization: $(printCyan "${BINARY} status 2>&1 | jq -r '.SyncInfo.latest_block_height // .sync_info.latest_block_height'")"
+echo -e "Check logs:            $(printYellow "sudo journalctl -u ${BINARY} -f -o cat")"
+echo -e "Check synchronization: $(printYellow "${BINARY} status 2>&1 | jq -r '.SyncInfo.latest_block_height // .sync_info.latest_block_height'")"
 sleep 2
