@@ -17,8 +17,8 @@ done
 
 printLogo
 
-echo -e "Your ${CYAN}${CHAIN_NAME}${NC} node host-name:${CYAN}${HOSTNAME}${NC} will be upgraded to version ${CYAN}${VERSION}${NC}"
-echo -e " ... on block height: ${CYAN}${TARGET_BLOCK}${NC}"
+echo -e "Your $(printCyan ${CHAIN_NAME}) node-name $(printCyan ${HOSTNAME}) will be upgraded to version $(printCyan ${VERSION})"
+echo -e " ... on block height: $(printRed ${TARGET_BLOCK})"
 
 for (( ; ; )); do
   if [ -z "$PORT_RPC" ]; then
@@ -28,17 +28,16 @@ for (( ; ; )); do
   fi
   if ((height >= TARGET_BLOCK)); then
     bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade/${CHAIN_NAME}_upgrade.sh) $VERSION
-    printCyan "Your node was successfully upgraded to version: $VERSION" && sleep 2
-    $BINARY version --long | head
+    echo -e "Your node was successfully upgraded to version: $(printCyan ${VERSION})"
+    $BINARY version
     break
   else
-    printf "Current block height: %s%s  \r" "${YELLOW}${height}${NC} - " $(expr $TARGET_BLOCK - $height)
+    printf "Current block height: %s - %s  \r" $(printYellow ${height}) $(expr $TARGET_BLOCK - $height)
   fi
   sleep 5
 done
 
 printLine
-echo -e ""
-echo -e "Check logs:            ${CYAN}sudo journalctl -u $BINARY_NAME -f --no-hostname -o cat ${NC}"
-echo -e "Check synchronization: ${CYAN}$BINARY_NAME status 2>&1 | jq -r '.SyncInfo.latest_block_height // .sync_info.latest_block_height'${NC}"
-echo -e "More commands:         ${CYAN}$CHEAT_SHEET${NC}"
+echo -e "Check logs:            $(printCyan "sudo journalctl -u ${BINARY} -f --no-hostname -o cat")"
+echo -e "Check synchronization: $(printCyan "${BINARY} status 2>&1 | jq -r '.SyncInfo.latest_block_height // .sync_info.latest_block_height'")"
+sleep 2
