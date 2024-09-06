@@ -7,7 +7,7 @@ cd $HOME
 rm -rf orai 
 git clone https://github.com/oraichain/orai 
 cd orai/orai
-git checkout $1   # version
+git checkout $1   # version v0.42.4
 make install
 
 sudo systemctl start oraid
