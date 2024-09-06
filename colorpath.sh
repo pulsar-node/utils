@@ -14,12 +14,16 @@ function printLine {
   echo "---------------------------------------------------------------------------------------"
 }
 
+function printRed {
+  echo -e "${RED}${1}${NC}"
+}
+
 function printCyan {
   echo -e "${CYAN}${1}${NC}"
 }
 
-function printRed {
-  echo -e "${RED}${1}${NC}"
+function printYellow {
+  echo -e "${YELLOW}${1}${NC}"
 }
 
 function addToPath {
