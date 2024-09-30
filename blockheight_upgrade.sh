@@ -32,7 +32,11 @@ while sleep 5; do
     $BINARY version
     break
   else
-    printf "Current block height: %s - %s  \r" $(printYellow ${height}) $(expr $TARGET_BLOCK - $height)
+    rest=$(expr $height - $TARGET_BLOCK)
+    h=$(($rest / 4500))
+    m=$(($rest % 4500 / 60))
+    s=$(($rest % 4500 % 60))
+    printf "Current block height: %s - %s %02d:%02d:%02d   \r" $(printYellow ${height}) "$rest" "$h" "$m" "$s"
   fi
 done
 
