@@ -4,14 +4,14 @@ source <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/colorp
 
 while getopts n:i:t:v:b:c:p: flag; do
   case "${flag}" in
-  n) CHAIN_NAME=$OPTARG ;;
-  i) CHAIN_ID=$OPTARG ;;
-  t) TARGET_BLOCK=$OPTARG ;;
-  v) VERSION=$OPTARG ;;
-  b) BINARY=$OPTARG ;;
-  c) CHEAT_SHEET=$OPTARG ;;
-  p) PORT_RPC=$OPTARG ;;
-  *) echo "WARN: unknown parameter: ${OPTARG}"
+    n) CHAIN_NAME=$OPTARG ;;
+    i) CHAIN_ID=$OPTARG ;;
+    t) TARGET_BLOCK=$OPTARG ;;
+    v) VERSION=$OPTARG ;;
+    b) BINARY=$OPTARG ;;
+    c) CHEAT_SHEET=$OPTARG ;;
+    p) PORT_RPC=$OPTARG ;;
+    *) echo "WARN: unknown parameter: ${OPTARG}"
   esac
 done
 
