@@ -20,7 +20,7 @@ printLogo
 echo -e "Your $(printCyan ${CHAIN_NAME}) node-name $(printCyan ${HOSTNAME}) will be upgraded to version $(printCyan ${VERSION})"
 echo -e " ... on block height: $(printRed ${TARGET_BLOCK})"
 
-for (( ; ; )); do
+while sleep 5; do
   if [ -z "$PORT_RPC" ]; then
     height=$($BINARY status 2>&1 | jq -r '.SyncInfo.latest_block_height // .sync_info.latest_block_height')
   else
@@ -34,7 +34,6 @@ for (( ; ; )); do
   else
     printf "Current block height: %s - %s  \r" $(printYellow ${height}) $(expr $TARGET_BLOCK - $height)
   fi
-  sleep 5
 done
 
 printLine
