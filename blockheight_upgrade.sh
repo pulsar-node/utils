@@ -32,7 +32,7 @@ while sleep 5; do
     $BINARY version
     break
   else
-    rest=$(expr $height - $TARGET_BLOCK)
+    rest=$(expr $TARGET_BLOCK - $height)
     h=$(($rest / 4500))
     m=$(($rest % 4500 / 60))
     s=$(($rest % 4500 % 60))
