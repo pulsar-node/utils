@@ -33,9 +33,9 @@ while sleep 5; do
     break
   else
     rest=$(expr $TARGET_BLOCK - $height)
-    h=$(($rest * 0.80 / 4300))
-    m=$(($rest % 4300 / 60))
-    s=$(($rest % 4300 % 60))
+    h=$(($rest * 0.80 / 3600))
+    m=$(($rest % 3600 / 60))
+    s=$(($rest % 3600 % 60))
     printf "Current block height: %s - %s %02d:%02d:%02d   \r" $(printYellow ${height}) "$rest" "$h" "$m" "$s"
   fi
 done
