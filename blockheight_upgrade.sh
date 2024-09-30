@@ -18,7 +18,7 @@ done
 printLogo
 
 echo -e "Your $(printCyan ${CHAIN_NAME}) node-name $(printCyan ${HOSTNAME}) will be upgraded to version $(printCyan ${VERSION})"
-echo -e " ...1 on block height: $(printRed ${TARGET_BLOCK})"
+echo -e " ...2 on block height: $(printRed ${TARGET_BLOCK})"
 
 while sleep 5; do
   if [ -z "$PORT_RPC" ]; then
@@ -33,9 +33,9 @@ while sleep 5; do
     break
   else
     rest=$(expr $TARGET_BLOCK - $height)
-    h=$(($rest / 4400))
-    m=$(($rest % 4400 / 60))
-    s=$(($rest % 4400 % 60))
+    h=$(($rest / 4300))
+    m=$(($rest % 4300 / 60))
+    s=$(($rest % 4300 % 60))
     printf "Current block height: %s - %s %02d:%02d:%02d   \r" $(printYellow ${height}) "$rest" "$h" "$m" "$s"
   fi
 done
