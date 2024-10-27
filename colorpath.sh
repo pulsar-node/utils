@@ -23,6 +23,10 @@ function printCyan {
   echo -e "${CYAN}${1}${NC}"
 }
 
+function printGreen {
+  echo -e "${GREEN}${1}${NC}"
+}
+
 function printYellow {
   echo -e "${YELLOW}${1}${NC}"
 }
