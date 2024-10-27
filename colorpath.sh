@@ -2,8 +2,9 @@
 
 # colorpath.sh
 NC=$(tput sgr0)			  # no color
-RED=$(tput setaf 1)		# red color
-CYAN=$(tput setaf 6)	# cyan color
+RED=$(tput setaf 1)
+CYAN=$(tput setaf 6)
+GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
 
 function printLogo {
