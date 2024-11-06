@@ -7,7 +7,7 @@ cd $HOME
 rm -rf orai 
 git clone https://github.com/oraichain/orai 
 cd orai
-git checkout $1   # version v0.42.4
+git checkout $1   # version v0.xx.x
 cd orai
 make install
 oraid version
