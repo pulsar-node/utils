@@ -7,7 +7,7 @@ screen -dmS home bash -c "bash <(curl -s https://raw.githubusercontent.com/pulsa
 
 ## Upgrade manually
 ```
-bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade/oraichain_upgrade.sh) v0.50.0 
+bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade/oraichain_upgrade.sh) v0.42.4 
 ```
 
 ## Wasmd Upgrade automatically
