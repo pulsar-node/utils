@@ -26,6 +26,13 @@ while sleep 5; do
   else
     height=$($BINARY status --node="tcp://127.0.0.1:$PORT_RPC" 2>&1 | jq -r '.SyncInfo.latest_block_height // .sync_info.latest_block_height')
   fi
+
+  # Check if height are valid numbers
+  if ! [[ "$height" =~ ^[0-9]+$ ]]; then
+    printf "Error: Invalid block height values.\r"
+    continue
+  fi
+  
   if ((height >= TARGET_BLOCK)); then
     bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade/${CHAIN_NAME}_upgrade.sh) $VERSION
     echo -e "Your node was successfully upgraded to version: $(printCyan ${VERSION})"
