@@ -3,7 +3,7 @@
 ## Upgrade automatically
 ```
 screen -dmS home bash -c "bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade.sh) -n oraichain -i Oraichain -t 39000564 -v v0.50.0 -b oraid"
-screen -ls
+screen -r home
 ```
 
 ## Upgrade manually
