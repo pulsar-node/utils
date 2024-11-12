@@ -44,7 +44,7 @@ while sleep 5; do
     h=$(($ms / 3600))
     m=$(($ms % 3600 / 60))
     s=$(($ms % 3600 % 60))
-    printf "Current block height: %s - %s %02d:%02d:%02d   \r" $(printYellow ${height}) $(printRed ${rest}) "$h" "$m" "$s"
+    printf "Current block height: %s - %s %02d:%02d:%02d   \r" $(printYellow ${height}) $(printGreen ${rest}) "$h" "$m" "$s"
   fi
 done
 
