@@ -18,7 +18,7 @@ done
 printLogo
 
 echo -e "Your ${CHAIN_NAME} node-name: $(printCyan ${HOSTNAME}) will be upgraded to version $(printCyan ${VERSION})"
-echo -e ". . .on block height: $(printCyan ${TARGET_BLOCK})"
+echo -e "...  on block height: $(printCyan ${TARGET_BLOCK})"
 
 while sleep 5; do
   if [ -z "$PORT_RPC" ]; then
