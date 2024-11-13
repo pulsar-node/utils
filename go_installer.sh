@@ -3,14 +3,14 @@
 # Parse command-line options
 while getopts ":v:" flag; do
   case "${flag}" in
-    v) V=${OPTARG} ;;
+    v) V="go${OPTARG}" ;;
     *) echo "WARN: unknown parameter: ${OPTARG}" ;;
   esac
 done
 
 # Determine the Go version
 LATEST_VERSION=$(curl -s https://go.dev/dl/?mode=json | jq -r '.[0].version')
-VERSION="go${V:-$LATEST_VERSION}"
+VERSION="${V:-$LATEST_VERSION}"
 
 # Determine the operating system and architecture
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
