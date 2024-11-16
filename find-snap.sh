@@ -9,8 +9,8 @@ polkachu=$(curl -s https://www.polkachu.com/tendermint_snapshots/orai | grep -oE
 
 urls=(
     "$owallet"
+    "https://files.andromedanode.co/$PROJECT/snap_$PROJECT.tar.lz4"
     "$polkachu"
-    "https://files.andromedanode.co/$PROJECT/snap_$PROJECT.tar.lz4"    
     )
 
 # Iterate over each URL
