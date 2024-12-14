@@ -16,6 +16,7 @@ urls=(
 
 # Iterate over each URL
 for url in "${urls[@]}"; do
+    echo "Download snapshots: $url" 
     if curl -s --head "$url" | head -n 1 | grep "200" > /dev/null; then
         if curl "$url" | lz4 -dc - | tar -xf - -C "${HOME}/.oraid"; then
             echo "Download and extraction successful from: $url"
