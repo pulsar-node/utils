@@ -12,7 +12,7 @@ urls=(
     "$owallet"
     "$polkachu"    
     "https://files.andromedanode.co/oraichain/snap_oraichain.tar.lz4"
-    )
+)
 
 # Iterate over each URL
 for url in "${urls[@]}"; do
