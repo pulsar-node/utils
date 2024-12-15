@@ -8,9 +8,9 @@ owallet=$(curl -s https://snapshot.owallet.io/files.json | jq -r '.files | max_b
 polkachu=$(curl -s https://www.polkachu.com/tendermint_snapshots/orai | grep -oE 'https://[^"]+orai_[0-9]+\.tar\.lz4' | sort | uniq | head -n 1)
 
 urls=(
-    "$owallet"
-    "$polkachu"
     "https://snap.blockval.io/oraichain/oraichain_latest.tar.lz4"
+    "$owallet"
+    "$polkachu"    
     "https://files.andromedanode.co/oraichain/snap_oraichain.tar.lz4"
     )
 
