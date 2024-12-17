@@ -12,6 +12,7 @@ urls=(
     "$owallet"
     "$polkachu"    
     "https://files.andromedanode.co/oraichain/snap_oraichain.tar.lz4"
+    # https://snapshot.orai.io
     "https://orai.s3.us-east-2.amazonaws.com/hourly_snapshots/oraichain_.tar.lz4"
 )
 
