@@ -10,7 +10,7 @@ LATEST_VERSION=$(curl -s https://go.dev/dl/?mode=json | jq -r '.[0].version')
 VERSION="${V:-$LATEST_VERSION}"
 
 # Determine the operating system and architecture
-OS=${(uname -s),,}    # lower
+OS=${$(uname -s),,}    # lower
 ARCH=$([[ $(uname -m) == "aarch64" ]] && echo "arm64" || echo "amd64")
 
 # Download and install Go binaries
