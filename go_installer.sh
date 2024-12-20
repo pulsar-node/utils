@@ -2,10 +2,7 @@
 
 # Parse command-line options
 while getopts ":v:" flag; do
-  case "${flag}" in
-    v) V="go${OPTARG}" ;;
-    *) echo "WARN: unknown parameter: ${OPTARG}" ;;
-  esac
+  [[ $flag == v ]] && V="go${OPTARG}" || echo "WARN: unknown parameter: ${OPTARG}"
 done
 
 # Determine the Go version
@@ -14,12 +11,7 @@ VERSION="${V:-$LATEST_VERSION}"
 
 # Determine the operating system and architecture
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
-ARCH=$(uname -m)
-case "${ARCH}" in
-  x86_64) ARCH="amd64" ;;
-  aarch64) ARCH="arm64" ;;
-  *) echo "Unsupported architecture: ${ARCH}" >&2; exit 1 ;;
-esac
+ARCH=$([[ $(uname -m) == "aarch64" ]] && echo "arm64" || echo "amd64")
 
 # Download and install Go binaries
 curl -L -# -O "https://golang.org/dl/${VERSION}.${OS}-${ARCH}.tar.gz"
