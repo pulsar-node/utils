@@ -12,9 +12,9 @@ polkachu=$(curl -s https://www.polkachu.com/tendermint_snapshots/orai | grep -oE
 
 urls=(
     "$owallet"
+    "$oraichain"    
     "https://snap.blockval.io/oraichain/oraichain_latest.tar.lz4"    
     "$polkachu"    
-    "$oraichain"
 )
 
 # Iterate over each URL
