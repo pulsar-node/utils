@@ -7,7 +7,7 @@
 owallet=$(curl -s https://snapshot.owallet.io/files.json | jq -r '.files | max_by(.mtime) | .filename' | awk '{print "https://snapshot.owallet.io/orai/" $0}')
 polkachu=$(curl -s https://www.polkachu.com/tendermint_snapshots/orai | grep -oE 'https://[^"]+orai_[0-9]+\.tar\.lz4' | sort | uniq | head -n 1)
 
-# https://snapshot.orai.io
+# curl -s https://snapshot.orai.io
 # oraichain="https://orai.s3.us-east-2.amazonaws.com/hourly_snapshots/oraichain_46073178.tar.lz4"
 
 urls=(
