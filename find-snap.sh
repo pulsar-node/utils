@@ -12,6 +12,7 @@ polkachu=$(curl -s https://www.polkachu.com/tendermint_snapshots/orai | grep -oE
 
 urls=(
     "https://snapshot.pfc.zone/files/oraichain/oraichain.latest.tar.lz4"
+    "http://snapshots.autostake.com/lyIs25DaSWMSm8evWKHGQrb/Oraichain/latest.tar.lz4"
     "$owallet"
     "$oraichain"    
     "https://snap.blockval.io/oraichain/oraichain_latest.tar.lz4"    
