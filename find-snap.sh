@@ -8,13 +8,12 @@ owallet=$(curl -s https://snapshot.owallet.io/files.json | jq -r '.files | max_b
 polkachu=$(curl -s https://www.polkachu.com/tendermint_snapshots/orai | grep -oE 'https://[^"]+orai_[0-9]+\.tar\.lz4' | sort | uniq | head -n 1)
 
 # https://snapshot.orai.io
-# oraichain="https://orai.s3.us-east-2.amazonaws.com/hourly_snapshots/oraichain_.tar.lz4"
+# oraichain="https://orai.s3.us-east-2.amazonaws.com/hourly_snapshots/oraichain_46073178.tar.lz4"
 
 urls=(
     "https://snapshot.pfc.zone/files/oraichain/oraichain.latest.tar.lz4"
-    "http://snapshots.autostake.com/lyIs25DaSWMSm8evWKHGQrb/Oraichain/latest.tar.lz4"
     "$owallet"
-    "$oraichain"    
+    "http://snapshots.autostake.com/lyIs25DaSWMSm8evWKHGQrb/Oraichain/latest.tar.lz4"
     "https://snap.blockval.io/oraichain/oraichain_latest.tar.lz4"    
     "$polkachu"    
 )
