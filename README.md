@@ -1,4 +1,3 @@
-Upgrade Oraichain automatically (~/wasmd)
 
 # utils
 
