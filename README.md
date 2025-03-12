@@ -9,5 +9,5 @@ screen -dmS home bash -c "bash <(curl -s https://raw.githubusercontent.com/pulsa
 
 ## Manulae Upgrade
 ```
-bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade/wasmd_upgrade.sh) v0.50.7
+bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade/wasmd_upgrade.sh) v0.50.8
 ```
