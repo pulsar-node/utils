@@ -3,7 +3,7 @@
 
 ## Upgrade Oraichain automatically (~/wasmd)
 ```
-screen -dmS home bash -c "bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade.sh) -n wasmd -i Oraichain -t 52247689 -v v0.50.7 -b oraid"
+screen -dmS home bash -c "bash <(curl -s https://raw.githubusercontent.com/pulsar-node/utils/main/blockheight_upgrade.sh) -n wasmd -i Oraichain -t 53006170 -v v0.50.8 -b oraid"
 ```
 
 
