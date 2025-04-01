@@ -40,8 +40,7 @@ while sleep 5; do
     break
   else
     rest=$(expr $TARGET_BLOCK - $height)
-    #ms=$(($rest * 70 / 100))
-    ms=$(($rest * 0.7))
+    ms=$(($rest * 70 / 100))
     h=$(($ms / 3600))
     m=$(($ms % 3600 / 60))
     s=$(($ms % 3600 % 60))
