@@ -1,13 +1,11 @@
 #!/bin/bash
 
 sudo systemctl stop oraid
-
-cd $HOME 
+cd $HOME
 rm -rf wasmd 
 git clone https://github.com/oraichain/wasmd
 cd wasmd
-git checkout $1  #v0.xx.x
+git checkout $1  #v0.50.x
 make build
 oraid version
-
 sudo systemctl restart oraid
