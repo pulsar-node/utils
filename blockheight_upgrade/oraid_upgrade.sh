@@ -2,13 +2,10 @@
 
 sudo systemctl stop oraid
 
-# Download new binary
-cd $HOME 
-rm -rf orai 
-git clone https://github.com/oraichain/orai 
-cd orai
+cd $HOME/wasmd
+git pull
 git checkout $1   # version v0.xx.x
-cd orai
-make install
-oraid version
-sudo systemctl start oraid
+make build
+oraid version --long | grep -e commit -e version
+
+sudo systemctl restart oraid
