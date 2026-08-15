@@ -2,12 +2,12 @@
 
 # curl -s https://snapshot.orai.io
 # oraichain="https://orai.s3.us-east-2.amazonaws.com/hourly_snapshots/oraichain_46073178.tar.lz4"
-owallet=$(curl -s https://snapshot.owallet.io/files.json | jq -r '.files | max_by(.mtime) | .filename' | awk '{print "https://snapshot.owallet.io/orai/" $0}')
+OWallet=$(curl -s https://snapshot.owallet.io/files.json | jq -r '.files | max_by(.mtime) | .filename' | awk '{print "https://snapshot.owallet.io/orai/" $0}')
 ORAICHAIN="https://orai.s3.us-east-2.amazonaws.com/$(curl -fsSL https://snapshot.orai.io/snapshot.json | jq -r '.[0].Key')"
 
 urls=(
     "$ORAICHAIN"
-    "$owallet"
+    "$OWallet"
     "https://snap.blockval.io/oraichain/oraichain_latest.tar.lz4"
     "https://snapshot.pfc.zone/files/oraichain/oraichain.latest.tar.lz4"
 )
