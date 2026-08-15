@@ -4,6 +4,17 @@
 # oraichain="https://orai.s3.us-east-2.amazonaws.com/hourly_snapshots/oraichain_46073178.tar.lz4"
 owallet=$(curl -s https://snapshot.owallet.io/files.json | jq -r '.files | max_by(.mtime) | .filename' | awk '{print "https://snapshot.owallet.io/orai/" $0}')
 
+
+SNAPSHOT_URL="https://snapshot.orai.io"
+SNAPSHOT=$(curl -fsSL "$SNAPSHOT_URL/" |
+    grep -oE 'href="[^"]+"' |
+    cut -d'"' -f2 |
+    grep -E '\.(tar\.gz|tar\.lz4|tar\.zst|tar)$' |
+    sort -V |
+    tail -n1)
+ORAICHAIN="$SNAPSHOT_URL/$SNAPSHOT"
+echo "$ORAICHAIN"
+
 urls=(
     "$owallet"
     "https://snap.blockval.io/oraichain/oraichain_latest.tar.lz4"
